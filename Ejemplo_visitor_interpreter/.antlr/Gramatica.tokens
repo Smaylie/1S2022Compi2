@@ -1,0 +1,11 @@
+MAS=1
+MEN=2
+POR=3
+DIV=4
+STR=5
+NUM=6
+WHITESPACE=7
+'+'=1
+'-'=2
+'*'=3
+'/'=4

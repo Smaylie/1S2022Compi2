@@ -1,0 +1,45 @@
+2022-02-19 17:18:22:918 grammar LogManager.java:25 before: (COMBINED_GRAMMAR Gramatica (OPTIONS (= language 'Go')) (RULES (RULE start (BLOCK (ALT X EOF { 
+        imprimir(X.val); 
+    }))) (RULE X (BLOCK (ALT L Lp {
+        X.val = L.entero + Lp.decimal;
+    }))) (RULE Lp (BLOCK (ALT '.' L { Lp.decimal = L.decimal; }) (ALT { Lp.decimal = 0; }))) (RULE L (BLOCK (ALT L H {
+        L.entero = L1.entero * 16 + B.val;
+        L.aux = L1.aux / 16;
+        L.decimal = L1.decial + B.val * L.aux
+    }) (ALT H {
+        L.entero = B.val;
+        L.aux = 1/16;
+        L.decimal = B.val * 1/16
+    }))) (RULE H (BLOCK (ALT NUM { H.val = NUM }) (ALT A { H.val = 10 }) (ALT B { H.val = 11 }) (ALT C { H.val = 12 }) (ALT D { H.val = 13 }) (ALT E { H.val = 14 }) (ALT F { H.val = 15 }))) (RULE A (BLOCK (ALT 'A'))) (RULE B (BLOCK (ALT 'B'))) (RULE C (BLOCK (ALT 'C'))) (RULE D (BLOCK (ALT 'D'))) (RULE E (BLOCK (ALT 'E'))) (RULE F (BLOCK (ALT 'F'))) (RULE NUM (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WHITESPACE (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [ \r\n\t])))) skip)))))
+2022-02-19 17:18:23:025 grammar LogManager.java:25 after: (COMBINED_GRAMMAR Gramatica (OPTIONS (= language 'Go')) (RULES (RULE start (BLOCK (ALT X EOF { 
+        imprimir(X.val); 
+    }))) (RULE X (BLOCK (ALT L Lp {
+        X.val = L.entero + Lp.decimal;
+    }))) (RULE Lp (BLOCK (ALT '.' L { Lp.decimal = L.decimal; }) (ALT { Lp.decimal = 0; }))) (RULE L (BLOCK (ALT L H {
+        L.entero = L1.entero * 16 + B.val;
+        L.aux = L1.aux / 16;
+        L.decimal = L1.decial + B.val * L.aux
+    }) (ALT H {
+        L.entero = B.val;
+        L.aux = 1/16;
+        L.decimal = B.val * 1/16
+    }))) (RULE H (BLOCK (ALT NUM { H.val = NUM }) (ALT A { H.val = 10 }) (ALT B { H.val = 11 }) (ALT C { H.val = 12 }) (ALT D { H.val = 13 }) (ALT E { H.val = 14 }) (ALT F { H.val = 15 }))) (RULE A (BLOCK (ALT 'A'))) (RULE B (BLOCK (ALT 'B'))) (RULE C (BLOCK (ALT 'C'))) (RULE D (BLOCK (ALT 'D'))) (RULE E (BLOCK (ALT 'E'))) (RULE F (BLOCK (ALT 'F'))) (RULE NUM (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WHITESPACE (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [ \r\n\t])))) skip)))))
+2022-02-19 17:18:23:141 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR Gramatica (OPTIONS (= language 'Go')) (RULES (RULE start (BLOCK (ALT X EOF { 
+        imprimir(X.val); 
+    })))))
+2022-02-19 17:18:23:141 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR GramaticaLexer (OPTIONS (= language 'Go')) (RULES (RULE X (BLOCK (ALT L Lp {
+        X.val = L.entero + Lp.decimal;
+    }))) (RULE Lp (BLOCK (ALT '.' L { Lp.decimal = L.decimal; }) (ALT { Lp.decimal = 0; }))) (RULE L (BLOCK (ALT L H {
+        L.entero = L1.entero * 16 + B.val;
+        L.aux = L1.aux / 16;
+        L.decimal = L1.decial + B.val * L.aux
+    }) (ALT H {
+        L.entero = B.val;
+        L.aux = 1/16;
+        L.decimal = B.val * 1/16
+    }))) (RULE H (BLOCK (ALT NUM { H.val = NUM }) (ALT A { H.val = 10 }) (ALT B { H.val = 11 }) (ALT C { H.val = 12 }) (ALT D { H.val = 13 }) (ALT E { H.val = 14 }) (ALT F { H.val = 15 }))) (RULE A (BLOCK (ALT 'A'))) (RULE B (BLOCK (ALT 'B'))) (RULE C (BLOCK (ALT 'C'))) (RULE D (BLOCK (ALT 'D'))) (RULE E (BLOCK (ALT 'E'))) (RULE F (BLOCK (ALT 'F'))) (RULE NUM (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WHITESPACE (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [ \r\n\t])))) skip)))))
+2022-02-19 17:18:24:255 semantics LogManager.java:25 tokens={EOF=-1, X=1, Lp=2, L=3, H=4, A=5, B=6, C=7, D=8, E=9, F=10, NUM=11, WHITESPACE=12}
+2022-02-19 17:18:24:255 semantics LogManager.java:25 strings={'A'=5, 'B'=6, 'C'=7, 'D'=8, 'E'=9, 'F'=10}
+2022-02-19 17:18:24:787 action-translator LogManager.java:25 translate  
+        imprimir(X.val); 
+    
